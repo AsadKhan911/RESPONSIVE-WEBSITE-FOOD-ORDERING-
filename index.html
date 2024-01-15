@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Mania</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /*CSS RESET*/
+        html, body {
+               
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+          }
+
+        /*NAVIGATION BAR*/
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+        }
+
+        /*LOGO AND IMAGE*/
+        #logo {
+            margin: 10px 34px;
+        }
+
+        #logo img {
+            height: 50px;
+            margin: 3px 6px;
+        }
+
+        /*Navigation Bar , List Styling*/
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 5px 0px 10px 1px white;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        /*HOME SECTION*/
+
+        #home {
+            height: 623px;
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 8px 8px black;
+        }
+
+        #home::before {
+            content: "";
+            background: url('bg4.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 715px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        /*SERVICES SECTION*/
+
+        #services {
+            margin: 34px;
+            display: flex;
+            height: 510px;
+            justify-content: center;
+
+        }
+
+        #services::before {
+            content: "";
+            position: absolute;
+            background: url('bgservices.jpg') no-repeat center center/cover;
+            height: 550px;
+            width: 100%;
+            z-index: -1;
+            filter: blur(5px);
+            background-size: cover;
+            box-sizing: border-box;
+        }
+
+        .box {
+            margin: 0px 10px;
+            margin-top: -24px;
+            margin-bottom: 34px;
+            padding: 30px;
+            border-radius: 25px;
+            background-color: rgb(240, 238, 238);
+            box-shadow: 5px 8px 10px red;
+            position: relative;
+            top: 41px;
+        }
+
+        .box img {
+            height: 150px;
+            display: block;
+            margin: auto;
+        }
+
+        #services .box p
+
+        /*targeting services and .box both*/
+            {
+
+            font-family: 'Playfair Display', serif;
+        }
+
+        /*Client Section*/
+        #client-section {
+            position: relative;
+        }
+
+        #client-section::before {
+            content: "";
+            position: absolute;
+            background: url('bgclients.jpg') no-repeat center center/cover;
+            height: 200px;
+            width: 100%;
+            z-index: -1;
+            filter: blur(5px);
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clients img {
+            height: 124px;
+        }
+
+        .client-item {
+            padding: 34px;
+        }
+
+        /* CONTACT SECTION*/
+
+        #contact {
+            position: relative;
+            height: 10%;
+        }
+
+        #contact::before {
+            content: "";
+            background: url('bgcontact.jpg') no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+            filter: blur(3px);
+
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 33px;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+
+        /*FOOTER*/
+        footer {
+            background-color: black;
+            height: 200px;
+            width: 100%;
+
+        }
+
+        .icondiv {
+            margin: 0px 0px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        .icon {
+            font-size: 25px;
+            position: relative;
+            top: 100px;
+            left: 61px;
+            margin: 0px 20px;
+            color: white
+        }
+
+        footer strong {
+            font-size: 30px;
+            position: relative;
+            top: 95px;
+            left: 68px;
+            color: white;
+        }
+
+        .flinks ul {
+            list-style: none;
+            font-size: 21px;
+            position: relative;
+            top: -15px;
+            left: 75%;
+        }
+
+        .flinks ul li {
+            margin: 17px 0px;
+        }
+
+        .flinks a {
+            color: white;
+        }
+
+        /* UTILITY CLASS STYLING*/
+
+        #home h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #home p {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .h-primary {
+            font-size: 3.8rem;
+            padding: 12px;
+
+            font-family: 'Playfair Display', serif;
+        }
+
+        .h-secondary {
+            font-size: 3rem;
+            padding: 20px;
+
+            font-family: 'Playfair Display', serif;
+
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid black;
+            background-color: orangered;
+            color: white;
+            margin: 17px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .services-container {
+            position: relative;
+            top: 0px;
+        }
+
+        /*RESPONSIVE STYLING*/
+        @media screen and (max-width: 1430px) {
+
+            /*body*/
+
+            /*navigation*/
+            #navbar {
+                flex-direction: column;
+            }
+
+            #navbar ul li a {
+                font-size: 0.5rem;
+                padding: 0px 7px;
+            }
+
+            /*home*/
+            #home {
+                height: 366px;
+                padding: 0px;
+            }
+
+            #home::before {
+                height: 480px;
+            }
+
+            #home p {
+                font-size: 0.6rem;
+            }
+
+            /*services*/
+            #services {
+                flex-direction: column;
+                position: relative;
+                left: -3.5rem;
+                width: 100%;
+            }
+
+            .services-container {
+                position: relative;
+                top: -12px;
+                left: 14px;
+            }
+
+            #services .box {
+                position: relative;
+                top: 4%;
+                height: 20%;
+                width: 75%;
+                left: 3%;
+            }
+
+            .box img {
+                height: 40px;
+
+            }
+
+            .box .h-secondary {
+                font-size: 18px;
+                padding: 1px;
+            }
+
+            .box p {
+                font-size: 6px;
+            }
+
+            /*client*/
+            #clients {
+                flex-wrap: wrap;
+            }
+
+            #clients img {
+                width: 35px;
+                padding: 0;
+            }
+
+            .client-item {
+                padding: 18px;
+            }
+
+            #client-section {
+                height: 200px;
+            }
+
+            /*contact*/
+        
+
+            textarea {
+            height: 8px;
+            }
+
+            #contact-box label {
+                font-size: 19px;
+            }
+
+            .form-group {
+                margin: 5px;
+            }
+
+            /*footer*/
+            .flinks ul li {
+                margin: 14px 0px;
+                position: relative;
+                left: -68px;
+                top: 23px;
+                font-size: 14px;
+            }
+
+            footer strong {
+                font-size: 15px;
+                position: relative;
+                left: 2%;
+            }
+
+            .icondiv {
+                position: relative;
+                left: -15px;
+            }
+
+            .icon {
+                font-size: 18px;
+                position: relative;
+                top: 100px;
+                left: 3%;
+                margin: 0px 10px;
+                color: white
+            }
+
+            /*utility*/
+            .h-primary {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 13px;
+                padding: 4px 8px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="piz.webp" alt="PizzaMania.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Deals</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- HOME SECTION -->
+    <section id="home">
+        <h1 class="h-primary">Welcome to MY ONLINE MEAL</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iusto possimus aas</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. disjks</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <!-- SERVICES SECTION -->
+    <h1 class="h-primary center">Our Services</h1>
+    <section class="services-container">
+        <div id="services">
+
+            <div class="box"><img src="icon1.png" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe beatae non assumenda,
+                    repudiandae eum
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, in. Voluptate, iste inventore, eaque
+                    ratione iure tempora ipsam animi esse, perspiciatis cupiditate officiis.
+
+                </p>
+            </div>
+
+            <div class="box"><img src="icon2.png" alt="">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe beatae non assumenda,
+                    repudiandae eum Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis autem quos non
+                    maxime debitis quidem laborum consequuntur commodi praesentium. Similique ratione officiis magni!
+
+                </p>
+            </div>
+
+            <div class="box"><img src="icon3.png" alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe beatae non assumenda,
+                    repudiandae eum Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error repellendus nam
+                    temporibus nihil eligendi sint? Itaque ducimus corporis, molestias rem illo tempora?
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- CLIENTS SECTION -->
+    <h1 class="h-primary center">Our Clients</h1>
+    <section id="client-section">
+        <div id="clients">
+            <div class="client-item">
+                <img src="icons1.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="icons3.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="icons2.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="icons4.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <h1 class="h-primary center">Contact Us</h1>
+    <section id="contact">
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" autocomplete="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="P.NO">Phone Number</label>
+                    <input type="P.NO" id="P.NO" placeholder="Enter your Contact" autocomplete="P.NO">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <strong>MyOnlineMeal</strong>
+        <div class="icondiv">
+            <a href="https://twitter.com/?lang=en" class="icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="icon"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="flinks">
+            <ul>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+                <a href="#">
+                    <li>Returns</li>
+                </a>
+                <a href="#">
+                    <li>Payments & Delivery</li>
+                </a>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
