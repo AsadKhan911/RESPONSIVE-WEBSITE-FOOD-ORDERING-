@@ -14,7 +14,7 @@ This project is a responsive website for food ordering. It demonstrates the use 
 
 You can view the live demo of the project by clicking the link below:
 
-[**Demo View**](https://your-demo-link.com)
+[**Demo View**](https://asadkhan911.github.io/RESPONSIVE-WEBSITE-FOOD-ORDERING-/)
 
 ## Demo Images
 
